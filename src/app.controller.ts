@@ -9,4 +9,9 @@ export class AppController {
   getHello(): string {
     return this.appService.getHello();
   }
+
+  @Get('admin/test')
+  getTest(): { message: string } {
+    return { message: 'Personal Finance API is working correctly' };
+  }
 }
