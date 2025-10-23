@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies
-RUN npm ci --only=production
+# Install all dependencies (including dev dependencies for build)
+RUN npm install
 
 # Copy source code
 COPY . .
@@ -20,4 +20,4 @@ RUN npm run build
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "run", "start:prod"]
+CMD ["npm", "run", "start:dev"]

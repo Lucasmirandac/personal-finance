@@ -6,12 +6,12 @@ services:
     container_name: personal-finance-mysql-dev
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: personal_finance
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
+      MYSQL_USER: app_user
+      MYSQL_PASSWORD: app_password
     ports:
-      - "3310:3310"
+      - "3310:3306"
     volumes:
       - mysql_dev_data:/var/lib/mysql
     networks:
@@ -32,9 +32,9 @@ services:
       NODE_ENV: development
       PORT: 3000
       DB_HOST: mysql
-      DB_PORT: 3310
-      DB_USER: root
-      DB_PASSWORD: root
+      DB_PORT: 3306
+      DB_USER: app_user
+      DB_PASSWORD: app_password
       DB_NAME: personal_finance
     ports:
       - "3000:3000"
