@@ -7,10 +7,10 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: personal_finance
-      MYSQL_USER: app_user
-      MYSQL_PASSWORD: app_password
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root
     ports:
-      - "3306:3306"
+      - "3310:3310"
     volumes:
       - mysql_data:/var/lib/mysql
       - ./docker/mysql/init:/docker-entrypoint-initdb.d
@@ -30,9 +30,9 @@ services:
       NODE_ENV: production
       PORT: 3000
       DB_HOST: mysql
-      DB_PORT: 3306
-      DB_USER: app_user
-      DB_PASSWORD: app_password
+      DB_PORT: 3310
+      DB_USER: root
+      DB_PASSWORD: root
       DB_NAME: personal_finance
     ports:
       - "3000:3000"

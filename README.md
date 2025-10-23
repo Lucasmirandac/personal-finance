@@ -120,7 +120,7 @@ docker compose up --build
 docker compose -f docker-compose.dev.yml up --build
 ```
 
-A aplicação estará disponível em `http://localhost:3000` e o MySQL na porta `3306`.
+A aplicação estará disponível em `http://localhost:3000` e o MySQL na porta `3310`.
 
 ### 📋 Setup Manual
 
@@ -135,7 +135,7 @@ npm install
 ```bash
 # Database Configuration
 DB_HOST=localhost
-DB_PORT=3306
+DB_PORT=3310
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=personal_finance

@@ -43,7 +43,7 @@ start_production() {
     docker compose up --build -d
     print_success "Production environment started!"
     print_status "Application: http://localhost:3000"
-    print_status "MySQL: localhost:3306"
+    print_status "MySQL: localhost:3310"
     print_status "Use 'docker compose logs app' to see application logs"
 }
 
@@ -54,7 +54,7 @@ start_development() {
     docker compose -f docker-compose.dev.yml up --build -d
     print_success "Development environment started!"
     print_status "Application: http://localhost:3000 (with hot reload)"
-    print_status "MySQL: localhost:3306"
+    print_status "MySQL: localhost:3310"
     print_status "Use 'docker compose -f docker-compose.dev.yml logs app' to see application logs"
 }
 
